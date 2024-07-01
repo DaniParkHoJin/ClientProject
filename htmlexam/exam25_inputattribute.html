@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 정보 입력</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>개인정보 입력</legend>
+            <table>
+                <tr>
+                    <td><label for="name">이름</label></td>
+                    <td><input type="text" name="name" id="name" placeholder="이름을 입력하시오" required="required"
+                            autofocus="autofocus" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">이메일</label>
+                    </td>
+                    <td><input type="email" name="email" id=" email" placeholder="이메일을 입력하시오" required="required" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">전화</label>
+                    </td>
+                    <td><input type="phone" name="phone" id=" phone" placeholder="전화번호를 입력하시오" required="required"
+                            title="###-####-####" pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}" /></td>
+                </tr>
+                <tr>
+                    <td><label for="photo">파일제출</label></td>
+                    <td><input type="file" , name="" id="photo" accept="image/gif, igage/jpeg, image/png" /></td>
+
+                </tr>
+            </table>
+            <input type="submit" value="제출" /> <input type="reset" value="취소" />
+        </fieldset>
+    </form>
+</body>
+
+</html>
