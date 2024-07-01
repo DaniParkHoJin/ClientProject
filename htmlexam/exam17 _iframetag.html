@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe 태그 확인 - exam17_iframetag.html</title>
+</head>
+
+<body>
+    <h3>문서 내에 다른 문서를 포함하고자 할 때</h3>
+    <p>
+        <iframe src="exam16_tablestructure.html" width="560">
+            <p>이 브라우저는 iframe을 지원하지 않습니다.</p>
+        </iframe>
+    </p>
+    <h3>유튜브 동영상을 문서에 포함하고자 할 때</h3>
+    <p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ay5spIdSWHs?si=fhLuIyvexJ620d1O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </p>
+    <p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WE-U-m7VuHk?si=WaA8OK-JEza8_B2Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </p>
+    <h3>다른 문서를 보고자 할 때</h3>
+    <p>
+        <iframe width="560" height="315" name="site"></iframe>
+    </p>
+    <ul>
+        <li>
+            <a href="exam07_divAndspan.html" target="site">div태그</a>
+        </li>
+        <li><a href="list_example01.htm" target="site">list예제</a></li>
+        <li><a href="exam15_tablespan.html" target="site">table태그</a></li>
+    </ul>
+    <div>HOME > 입학신청 > 온라인 접수</div>
+    <hr />
+    <div>개인정보보호정책</div>
+    <div>
+        <iframe src="https://policy.naver.com/rules/privacy.html" width="700" height="350" title="개인정보취급방침"></iframe>
+    </div>
+</body>
+
+</html>

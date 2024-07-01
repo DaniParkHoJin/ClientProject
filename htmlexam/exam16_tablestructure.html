@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 구조(thead, tbody, tfoot) 확인</title>
+</head>
+
+<body>
+    <table border="1">
+        <caption align="top">교재 가격표</caption>
+        <thead>
+            <tr>
+                <th>서적명</th>
+                <th>출판사</th>
+                <th>가격</th>
+                <th>기타</th>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <th colspan="2">합계</th>
+                <td>107,000원</td>
+                <td>&nbsp;</td>
+            </tr>
+        </tfoot>
+
+        <tbody>
+            <tr>
+                <td>HTML5</td>
+                <td>미래닷컴</td>
+                <td>55,000원</td>
+                <td>360페이지</td>
+            </tr>
+            <tr>
+                <td>CSS3</td>
+                <td>한빛미디어</td>
+                <td>32,000원</td>
+                <td rowspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>누리출판사</td>
+                <td>20,000원</td>
+            </tr>
+        </tbody>
+
+
+
+
+    </table>
+</body>
+
+</html>
