@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html5 추가 태그들</title>
+</head>
+
+<body>
+    <form method="get">
+        <h3>참가국 정보</h3>
+        참가국: <input type="text" size="12" list="country" />
+        <datalist id="country">
+            <option value="스페인" />
+            <option value="영국" />
+            <option value="독일" />
+        </datalist>
+        <input type="submit" value="구입" />
+    </form>
+    <datalist>
+        <summary>이미지 정보</summary>
+        <ul>
+            <li>파일: mouse.png</li>
+            <li>크기: 36kb</li>
+            <li>위치: D:\ClientProject\image</li>
+            <li><a href="image/mouse.png" download>파일다운로드</a></li>
+        </ul>
+    </datalist>
+    <br />
+    <meter value="0.75">75%</meter>
+    <br />
+    <br />
+    <progress value="30" max="100">Progress:10%</progress>
+    <br />
+    <br />
+    <menu lable="커피종류">
+        <li style="list-style: none;"><input type="radio" name="tea">아메리카노</li>
+        <li style="list-style: none;"><input type="radio" name="tea">돌체라떼</li>
+        <li style="list-style: none;"><input type="radio" name="tea">콜드브루</li>
+    </menu>
+</body>
+
+</html>
