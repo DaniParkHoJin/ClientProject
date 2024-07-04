@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/login.css" />
+  <title>나의 사이트</title>
+</head>
+
+<body>
+  <!-- header ------------------------------------------ -->
+  <header>
+    <div class="container">
+      <div class="logo"><img src="../htmlexam/image/logo.png" /></div>
+      <ul class="sidemenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- //header -->
+  <!-- nav --------------------------------------------- -->
+  <nav>
+    <div class="container">
+      <ul class="leftMenu">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#">갤러리</a></li>
+        <li class="dropBox">
+          <a href="#">게시판</a>
+          <span class="dropmenu">
+            <span><a href="#">자유 게시판</a></span>
+            <span><a href="#">문의 게시판</a></span>
+            <span><a href="#">건의 게시판</a></span>
+          </span>
+        </li>
+        <li class="dropBox">
+          <a href="">멀티미디어</a>
+          <span class="dropmenu">
+            <span><a href="#">음악듣기</a></span>
+            <span><a href="#">동영상보기</a></span>
+          </span>
+        </li>
+        <li class="coming-soon"><a href="#">상품구매</a></li>
+        <li><a href="#">찾아오시는길</a></li>
+      </ul>
+      <ul class="rightMenu">
+        <li><a href="html/join.html">회원가입</a></li>
+        <li class="active"><a href="html/login.html">로그인 </a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- //nav -->
+
+  <!-- section --------------------------------------------- -->
+  <section id="section2">
+    <div class="container">
+      <div class="loginBox">
+        <div>
+          <div class="box">
+            <div class="logo">
+              <h1>로그인</h1>
+            </div>
+            <form action="/login" method="post">
+              <input type="text" name="uid" placeholder="아이디">
+              <input type="password" name="pw" placeholder="비밀번호">
+              <button type="submit">로그인</button>
+            </form>
+          </div>
+          <div class="box">
+            <div class="social logo">
+              <h1>소셜 로그인하기</h1>
+              <button class="facebook">페이스북 ID로 로그인</button>
+              <button class="twitter">트윗터 ID로 로그인</button>
+              <button class="naver">네이버 ID로 로그인</button>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div class="alert">
+            <h1>도움이 필요하신가요?</h1>
+            <p>
+              <button>아이디 찾기</button>
+              <button>비밀번호 찾기</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="clear"></div>
+  <footer>
+    <div class="top">
+      <div class="container">
+        <span>다운로드</span>
+        <span>개인정보처리방식</span>
+        <span>저작권지침및신고</span>
+        <span>이메일무단수집거부</span>
+      </div>
+    </div>
+    <div class="container">
+      <address>
+        왕십리캠퍼스 : 서울시 성동구 무학로2길 52 신방빌딩 4,5층
+        Tel:02-441-6006
+      </address>
+      <div class="copyright">
+        Copyright &copy; 2018 mrhi, Inc. All rights reserved. Contact
+        webmaster for more information. 02-441-6006
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

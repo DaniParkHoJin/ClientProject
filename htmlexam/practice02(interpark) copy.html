@@ -3,173 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>인터파크티켓</title>
+    <title>인터파크티켓(예제)구역 나누기</title>
     <style type="text/css">
-      #wrapper {
-        margin: 0px auto;
-        background-color: aliceblue;
+      #wrapper { margin: 0 auto;
+        background-color: rgb(198, 207, 216);
       }
-      #interpark_header {
-        margin: 0px auto;
-        background-color: aqua;
+      header { background-color: aqua;
+        margin: 0 auto;
+        width : 100%;
+        height: 50px;
       }
-      #header_nav {
-        margin: 0;
-        padding: 0;
-        background-color: rgb(15, 199, 199);
+      #main_menu { background-color: antiquewhite;
+        width : 100%;
+        height: 30px;
       }
-      header > section > article {
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-        background-color: rgb(29, 131, 97);
+      #sliding_perform{
+        background-color: azure;
+        width : 100%;
+        height: 500px;
       }
-      main > nav > article {
-        display: inline-block;
+      #main_perform{
+        background-color: yellow;
+        width : 40%;
+        display: block;
+        
+      }
+      .main_perform1, .main_perform3, .main_perform5{
+        margin: 5px;
+        
       }
 
-      #main_menu {
-        background-color: rgb(125, 148, 148);
-        width: 100%;
-        height: 20px;
-      }
-      #sliding_perform {
-        width: 100%;
-        height: 300px;
-        background-color: rgb(137, 182, 53);
-      }
-      .main_perform1,
-      .main_perform3,
-      .main_perform5 {
-        margin: 1% auto;
-        display: inline-block;
-        width: 48%;
-        height: 45%;
-        background-color: aquamarine;
-      }
-      .main_perform2,
-      .main_perform4,
-      .main_perform6 {
-        margin: 1% auto;
-        display: inline-block;
-        width: 48%;
-        height: 45%;
-        background-color: aquamarine;
+      .main_perform2, .main_perform4, .main_perform6{
+        margin: 5px;
+        
       }
 
       #ranking {
-        background-color: rgb(121, 41, 117);
-      }
-      #musical {
-        background-color: rgb(156, 95, 153);
-      }
-      #ticket_open {
-        background-color: rgb(12, 81, 145);
-      }
-      #play {
-        background-color: rgb(53, 100, 47);
-      }
-      #on_sale {
-        background-color: rgb(71, 14, 36);
-      }
-      #pick {
-        background-color: rgb(135, 211, 125);
-      }
-      #keyword {
-        background-color: rgb(204, 166, 184);
-      }
-      #review {
-        background-color: rgb(219, 96, 39);
-      }
-
-      #best_review {
-        background-color: rgb(72, 193, 223);
-      }
-      #inpick {
-        background-color: rgb(107, 98, 101);
-      }
-
-      #footer {
-        clear: both;
-        background-color: rgb(32, 16, 179);
+        background-color: violet;
+        width : 100%;
+        height: 300px;
+        display: block;
       }
     </style>
   </head>
-
   <body>
     <div id="wrapper">
       <header id="interpark_header">
-        <section id="header_nav">
-          <article class="header_nav1">
-            <h5>로고</h5>
-          </article>
-          <article class="header_nav2">
-            <h5>검색</h5>
-          </article>
-          <article class="header_nav3">
-            <h5>로그인</h5>
-          </article>
-          <article class="header_nav4">
-            <h5>회원가입</h5>
-          </article>
-          <article class="header_nav5">
-            <h5>마이페이지</h5>
-          </article>
-          <article class="header_nav6">
-            <h5>로케이션</h5>
-          </article>
-        </section>
+        <p>헤더</p>
       </header>
       <main>
         <nav id="main_menu">
-          <article id="logo">
-            <h5>뮤지컬</h5>
-          </article>
-          <article id="search">
-            <h5>콘서트</h5>
-          </article>
-          <article id="search">
-            <h5>스포츠</h5>
-          </article>
-          <article id="search">
-            <h5>클래식/무용</h5>
-          </article>
-          <article id="search">
-            <h5>아동/가족</h5>
-          </article>
-          <article id="search">
-            <h5>연극</h5>
-          </article>
-          <article id="search">
-            <h5>레저/캠핑</h5>
-          </article>
-          <article id="search">
-            <h5>토핑</h5>
-          </article>
-          <article id="search">
-            <h5>MD샵</h5>
-          </article>
-          <article id="search">
-            <h5>랭킹</h5>
-          </article>
-          <article id="search">
-            <h5>오픈공지</h5>
-          </article>
-          <article id="search">
-            <h5>지역별</h5>
-          </article>
-          <article id="search">
-            <h5>공연장</h5>
-          </article>
-          <article id="search">
-            <h5>스테이지</h5>
-          </article>
+          <p>메인메뉴</p>
         </nav>
         <section id="sliding_perform">
-          <h4>슬라이딩 공연정보</h4>
-          <article>
-            <h5>슬라이딩 메뉴</h5>
-          </article>
+          <p>슬라이딩 공연정보</p>
         </section>
         <section id="main_perform">
           <article class="main_perform1">
@@ -193,32 +80,7 @@
         </section>
         <section id="ranking">
           <nav>
-            <h4>장르별 랭킹</h4>
-            <h5>장르별 랭킹 메뉴</h5>
-            <article>
-              <h5>뮤지컬</h5>
-            </article>
-            <article>
-              <h5>콘서트</h5>
-            </article>
-            <article>
-              <h5>스포츠</h5>
-            </article>
-            <article>
-              <h5>전시/행사</h5>
-            </article>
-            <article>
-              <h5>클래식/무용</h5>
-            </article>
-            <article>
-              <h5>아동/가족</h5>
-            </article>
-            <article>
-              <h5>연극</h5>
-            </article>
-            <article>
-              <h5>레저/캠핑</h5>
-            </article>
+            <p>장르별 랭킹</p>
           </nav>
         </section>
         <section id="musical">
