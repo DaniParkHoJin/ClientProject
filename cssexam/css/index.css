@@ -1,0 +1,68 @@
+@charset "UTF-8";
+#section1 > .container > div {
+    height: 100%;
+    float: left;
+  }
+  #section1 .leftBox {
+    width: calc(40% - 15px);
+    margin-right: 15px;
+  }
+  #section1 .leftBox > .imgBox {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+  }
+  #section1 .leftBox > .imgBox > img {
+    width: 100%;
+  }
+  #section1 .rightBox {
+    width: calc(60% - 15px);
+    margin-left: 15px;
+  }
+  #section1 .rightBox > .imgBox {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+  }
+  #section1 .rightBox > .imgBox > img {
+    width: 100%;
+  }
+  #section1 .rightBox > .table {
+    width: 100%;
+    height: calc(100% - 280px - 15px);
+    margin-top: 15px;
+  }
+  #section1 .table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: center;
+  }
+  #section1 .table > table > caption {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  #section1 .table > table td,
+  #section1 .table > table th {
+    padding: 8px 5px;
+    border: 1px solid #ccc;
+  }
+  .blue {
+    color: white;
+    background: #43cbff;
+  }
+  .green {
+    color: white;
+    background: #81d733;
+  }
+  .yellow {
+    background: yellow;
+  }
+  .orange {
+    background: orange;
+  }
+  .red {
+    color: white;
+    background: red;
+  }
