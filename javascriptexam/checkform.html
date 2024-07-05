@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>기타 기입할 때 글상자를 활성화</title>
+    <script type="text/javascript">
+        function checkform(f) {
+           f.textstr.disabled = !f.lang[5].checked;
+           if (f.lang[5].checked) {
+               f.textstr.style.backgroundColor = "white";
+               f.textstr.focus();
+           } else {
+               f.textstr.style.backgroundColor = "silver";
+           }
+        }
+    </script>
+    <style type="text/css">
+        #textetc{background-color: silver};
+    </style>
+</head>
+<body>
+<form name="form1" onclick="checkform(this)">
+    <p>1. 좋아하는 과목은?</p>
+    <p>
+        <input type="radio" name="lang" value="java">java
+        <input type="radio" name="lang" value="asp">asp
+        <input type="radio" name="lang" value="jsp">jsp
+        <input type="radio" name="lang" value="php">php
+        <input type="radio" name="lang" value="mssql">mssql
+        <input type="radio" name="lang" value="etc">기타
+        <input type="text" name="textstr" id="textetc" size=20 disabled>
+    </p>
+</form>
+</body>
+</html>

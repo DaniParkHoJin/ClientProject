@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상황에 따라 텍스트박스 보이고 안보이는 팁</title>
+    <script type="text/javascript">
+        ns4 = (document.layers) ? true : false;
+        function day_view() {
+            if (ns4) {
+                document.wedding_day.visibility = "show";
+            } else {
+                document.all.wedding_day.style.visibility = "visible";
+            }
+        }
+        function day_hide() {
+            if(ns4) {
+                document.wedding_day.visibility = "hide";
+
+            }else {
+                document.all.wedding_day.style.visibility ="hidden";
+            }
+        }
+    </script>
+    <style type="text/css">
+        #wedding_day {
+            visibility: hidden
+        }
+    </style>
+</head>
+<body>
+<p>상황에 따라 텍스트박스 보이고 안보이는 팁</p>
+<form name="form">
+    <p>
+        <input type="radio" name="wedding"
+               value="no_wed" onclick="day_hide()">미혼
+    </p>
+    <p>
+        <input type="radio" name="wedding" value="wed"
+               onclick="day_view()">기혼
+    </p>
+    <div id="wedding_day">
+        <p>
+            결혼기념일 : <input type="date" name="wed_day">
+        </p>
+    </div>
+</form>
+</body>
+</html>

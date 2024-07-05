@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for if Test</title>
+    <script type="text/javascript">
+        let sum1 = 0;
+        let sum2 = 0;
+        for (let i = 1; i <= 100; i++) {
+            // 2로 나눈 나머지가 0이면 짝수
+            if (i % 2 == 0) {
+                sum1 += i;
+
+            } else {
+                sum2 += i;
+            }
+        }
+        document.write("<h1>짝수들의 합 = " + sum1 + "</h1>");
+        document.write("<h1>홀수들의 합 = " + sum2 + "</h1>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>
