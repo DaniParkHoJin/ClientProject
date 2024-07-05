@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Test</title>
+    <script type="text/javascript">
+        function insertQuestion() {
+            // 내용을 입력받는 대화상자
+            let q = prompt("사칙연산의 수식을 입력하세요. (예: 100+50)", "");
+            // 입력받은 문자열을 수식으로 변환한다.(내장함수 사용)
+            let answer = eval(q);
+            // 사용자가 입력한 질문(q)와 계산결과 (answer)를
+            // 하나의 문자열로 연결한다.
+            let result = q + "=" + answer;
+            // 출력
+            document.getElementById("question").innerHTML = result;
+        }
+    </script>
+</head>
+<!-- 페이지가 처음 열려서 웹 브라우저에게 HTML 태그의 인식이 완료된 후,
+자동으로 insertQuestion() 함수가 호출되도록 함 -->
+<body onload="insertQuestion()">
+<h1 id="question"></h1>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>isNaN Test</title>
+    <script type="text/javascript">
+        // 결과 : "NaN"
+        let a = Number("a");
+        document.write("<h1>a=" + a + "</h1>")
+
+        // "NaN" + 1 지만 "NaN1"이 아닌 "NaN'이 된다.
+        let a_sum = a+ 1;
+        document.write("<h1>a_sum=" + a_sum + "</h1>");
+
+        // "NaN" + "str"이므로 "NaNstr"이 된다.
+        let a_str = a + "str";
+        document.write("<h1>a_str=" + a_str + "</h1>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>
