@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If Test</title>
+    <script type="text/javascript">
+
+        let is_korean = true;
+
+        if (is_korean == true){
+            document.write("<h1>한국사람입니다.</h1>");
+        }
+        if (is_korean == false){
+            document.write("<h1>한국사람이 아닙니다.</h1>");
+        }
+        if (is_korean){ // 값 자체가 참이므로 성립된다.
+            document.write("<h1>한국사람입니다.</h1>");
+        }
+        if (!is_korean){ // "!"는 값을 부정한다. 참을 부정하으로 거짓이다.
+            document.write("<h1>한국사람이 아닙니다.</h1>");
+        }
+
+        let is_japanese = false;
+        if (is_japanese != true)
+        {
+            document.write("<h1>일본사람이 아닙니다.</h1>");
+        }
+        if (is_japanese != false) {
+            document.write("<h1>일본사람 입니다.</h1>");
+        }
+        if (is_japanese) {  // 값 자체가 거짓이므로 성립되지 않는다.
+            document.write("<h1>일본사람이 아닙니다.</h1>");
+        }
+        if (!is_japanese) { // 거짓을 부정하였으므로 참이다.
+            document.write("<h1>일본사람 입니다.</h1>");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
