@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Test</title>
+    <script type="text/javascript">
+        function sum(x, y) {
+            let z = x + y;
+            return z;
+        }
+        function printResult(x,y) {
+            // (우변) sum 함수를 호출하여 결과를 리턴 받았다.
+            // (좌변) 리턴받은 결과를 result 에 대입하였다.
+            let result = sum(x, y)
+            document.write("<h1>" + result + "</h1>")
+        }
+        printResult(7,10);
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

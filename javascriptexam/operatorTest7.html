@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Text</title>
+    <script type="text/javascript">
+
+        // null, undefined 값이 없음.
+
+        let numA = 10;
+        let numB = 20;
+        let numC;
+
+        // numA, numB에 값이 둘 다 있으나 왼쪽 numA만 출력
+        console.log(numA ?? numB);
+        // numC 가 null 이기에 numB 를 출력함.
+        console.log(numC ?? numB);
+
+        // 변수 user에 해당 사용자의 이름이 있다면 이름을, 이름이 없다면 닉네임을 저장하시오.
+        let name;
+        let nickname = "NonameNickname";
+
+        let user = name ?? nickname;
+
+        console.log(user);
+
+        // 만약에 name 에 이름이 있다면?
+
+        name = "박호진";
+        nickname = "Daniel";
+
+        user = name ?? nickname;
+
+        console.log(user);
+    </script>
+</head>
+<body>
+<h1>null 병합 연산자 예제</h1>
+</body>
+</html>

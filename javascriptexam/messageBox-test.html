@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>messageBox Test</title>
+    <script type = "text/javascript">
+        let user_id = prompt("아이디를 입력하세요.","");
+
+        // 빈 무자열 아닌 경우에만 실행
+        if (user_id !=""){
+            alert("안녕하세요." + user_id + "님");
+
+            let result = confirm("정말 로그아웃 하시겠습니까?");
+
+            if (result) {
+                alert("로그아웃 되셨습니다.");
+            } else {
+                alert("로그아웃이 취소되었습니다?");
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
