@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료전달</title>
+    <script type="text/script">
+        function openwin() {
+            window.open("zipcode.html", "","top=300,left=300,width=400,height=250");
+            }
+    </script>
+</head>
+
+<body>
+    <p>우편번호 찾기</p>
+    <form method="post" name="form1">
+        <p>
+            <input type="text" name="zipcode" size="5">
+            <input type="button" value="우편번호" onclick="openwin()">
+        </p>
+        <input type="text" name="addr1" size="30"><br>
+        <input type="text" name="addr2" size="30" placeholder="상세 주소">
+    </form>
+</body>
+
+</html>
