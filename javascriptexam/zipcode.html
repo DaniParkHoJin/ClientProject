@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주소검색결과</title>
+    <script type="text/script">
+        function filladd(zip1, addr){
+            opener.document.form1.zipcode.value = zip1;
+            opener.document.form1.addr1.value = addr;
+            this.close()
+        }
+    </script>
+</head>
+<body>
+    <p><input type="text" name="zipcode" size="30">
+        <input type="button" value="우편번호" onclick="zipcodesearch()">
+       </p>
+       <a href="javascript:filladd('15080','서울특별시 영등포구 당산1동')">15080
+       서울특별시 영등포구 당산1동</a>
+       <br>
+       <a href="javascript:filladd('15042','서울특별시 영등포구 당산2동')">15042
+       서울특별시 영등포구 당산2동</a>
+       <br>
+       <a href="javascript:filladd('15002','서울특별시 영등포구 당산3동')">15002
+       서울특별시 영등포구 당산3동</a>
+</body>
+</html>
