@@ -1,6 +1,16 @@
-*{font-family: "Comic Sans MS";}
+* {
+    font-family: "Comic Sans MS";
+}
 
-th{
+th {
     background-color: floralwhite;
 }
-li {color: #0088dd}
+
+li {
+    color: #0088dd
+}
+
+#ect_input {
+    visibility: hidden;
+}
+
