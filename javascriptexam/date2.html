@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Test</title>
+    <script type="text/javascript">
+        // 요일의 이름을 저정하고 있는 배열을 생성
+        let days = ["일", "월", "화", "수", "목", "금", "토"];
+
+        // Date 객체의 생성 --> 이 객체 안에는 기본적으로 현재 시각이 저장되어 있다.
+        let mydate = new Date();
+        // Date 객체 안에 저장된 시각을 임의의 날짜로 변경하기, -> 2022년 5월 16일
+        mydate.setYear(2016);
+        mydate.setMonth(4);
+        mydate.setDate(16);
+        mydate.setHours(9);
+        mydate.setMinutes(30);
+        mydate.setSeconds(0);
+
+        // 년,월,일.시간,분,초를 리턴받기
+        let yy = mydate.getFullYear();
+        // 월은 0이 1월 11이 12월을 의미한다. 그러므로 1 증가시켜준다.
+        let mm = mydate.getMonth() + 1;
+        let dd = mydate.getDate();
+
+        // 0=일요일~6=토요일의 값이 리턴된다.
+        let i = mydate.getDay();
+        let day = days[i];
+        let hh = mydate.getHours();
+        let mi = mydate.getMinutes();
+        let ss = mydate.getSeconds();
+
+        let result = yy + "-" + mm + "-" + dd + " " + day + "요일 " + hh + ":" + mi + ":" + ss;
+        document.write("<h1>" + result + "</h1>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
