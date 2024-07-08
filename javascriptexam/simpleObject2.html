@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Test</title>
+    <script type="text/javascript">
+        /**
+        * 객체 안에 멤버변수와 함수를 포함시키기 
+        */
+        // 비어 있는 객체의 생성
+        var people = {};
+
+        //  객체 안에 변수를 포함시키기
+        people.name = "홍길동";
+        people.gender = "남자";
+
+        // 객체 안에 함수를 포함시키기
+        people.sayName = function () {
+            // 객체 안에 포함된 함수에서, 멤버변수에 접근하기 위해서는 
+            // 반드시 "this."이라는 특수 예약어를 사용해야 한다.
+            document.write("<h1>" + this.name + "</h1>");
+        };
+        people.sayGender = function () {
+            document.write("<h1>" + this.gender + "</h1>");
+        };
+        people.saySomething = function (msg) {
+            document.write("<h1>" + msg + "</h1>");
+        };
+        people.getName = function () {
+            return this.name;
+        };
+        people.getGender = function () {
+            return this.gender;
+        };
+        people.sayInfo = function () {
+            document.write("<h1>" + this.getName() + "님은 " +
+                this.getGender() + "입니다.</h1>");
+        };
+
+        // 객체 안의 메서드 호출예제
+        people.sayName();
+        people.sayGender();
+        people.saySomething("Hello Javascript");
+        people.sayInfo();
+        console.log(people);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

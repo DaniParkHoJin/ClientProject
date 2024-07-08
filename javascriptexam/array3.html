@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Test</title>
+    <script type="text/javascript">
+      // 2차원 배열의 생성
+      let generalArray = [
+          ["김유신", "통일신라", "장군"],
+          ["이순신", "조선", "장군"],
+          ["강감찬", "고려", "장군"]
+      ];
+      //myarray.length 는 2차원 배열읠 줄(행) 수
+      for (let i = 0; i < generalArray.length; i++) {
+          //myarray[i].length 는 i번째 줄의 칸(열) 수
+          for (let j = 0; j < generalArray[i].length; j++) {
+              document.write("<h1>" + generalArray[i][j] + "</h1>");
+          }
+
+      }
+    </script>
+</head>
+<body>
+</body>
+</html>

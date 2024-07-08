@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Test</title>
+    <script type="text/javascript">
+        // 날짜 객체
+        let theday = new Date(2024,4, 16);
+        let today = new Date();
+        let cnt = today.getTime() - theday.getTime();
+
+        // Math.floor는 소수점 이하를 절단하는 함수이다.
+        let day = Math.floor( cnt / (24 * 60 * 60 * 1000));
+        document.write("<h1>개강한지 " + day + "일 지났습니다.</h1>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
