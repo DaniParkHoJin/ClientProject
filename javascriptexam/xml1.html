@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xml</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <!-- jQuery Framework 참조하기 -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <!-- 사용자 스크립트 블록 -->
+    <script type="text/javascript">
+        $(function () {
+            $("#mybtn").click(function () {
+
+                $.ajax({
+                    url: "xml/xmlData1.xml",
+                    type: "get",
+                    dataType: "xml",
+                    cache: false,
+                    timeout: 30000,
+                    success: function (xml) {
+                        // 읽어온 XML 파일 안에 포함된 데이터를 추출
+                        let title = $(xml).find("title").text();
+                        let time = $(xml).find("time").text();
+                        let teacher = $(xml).find("teacher").text();
+
+                        // 추출된 데이터를 화면에 출력하기 위한 HTML 요소를 동적으로 생성
+                        let div = $("<div>");
+                        let p1 = $("<p>").html(title);
+                        let p2 = $("<p>").html(time);
+                        let p3 = $("<p>").html(teacher);
+
+                        // 메서드 체인을 사용한 동적 요소의 결합
+                        div.append(p1).append(p2).append(p3);
+
+                        // 화면에 표시
+                        $("#result").append(div);
+
+                    }, error: function (xhr, textStatus, errorThrown) {
+                        $("div").html("<div>" + textStatus + "(Http-" + xhr.status + "/" + errorThrown + ")</div>");
+                    }
+                });
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+<h1 class="title">$.ajax() 함수를 사용한 XML 데이터 읽기 (1)</h1>
+<div class="exec">
+    <input type="button" value="xml데이터 가져오기" id="mybtn"/>
+</div>
+<div class="console" id="result"></div>
+</body>
+</html>

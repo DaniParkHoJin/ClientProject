@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <link href="./css/join.css" rel="stylesheet" type="text/css"/>
+
     <script type="text/javascript" src="./javascript/join.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
@@ -24,7 +25,7 @@
             허위로 작성된 가입정보일 경우 임의로 삭제처리될 수 있으니 주의해 주세요.
         </li>
     </ol>
-    <form name="regform" method="post">
+    <form name="regform" method="post" onsubmit="return checkForm(document.regform)">
         <table>
 
 
@@ -52,12 +53,12 @@
                 </td>
             </tr>
             <tr>
-                <th><label for="password">비밀번호</label></th>
-                <td><input type="password" name="name_password" id="id_password" required="required"/>&nbsp;재입력 <input
-                        type="password" name="naem_repassword" id="id_repassword" required="required"/></td>
+                <th><label for="id_password">비밀번호</label></th>
+                <td><input type="password" name="name_password" id="id_password" required="required"/>&nbsp;&nbsp; 비밀번호 확인 <input
+                        type="password" name="name_repassword" id="id_repassword" required="required"/></td>
             </tr>
             <tr>
-                <th><label for="email">이메일</label></th>
+                <th><label for="id_email">이메일</label></th>
                 <td><input type="email" name="name_email" id="id_email" required="required"/>&nbsp;<input type="checkbox"
                                                                                                   name="emailagree"
                                                                                                   value="emailagree"
@@ -129,7 +130,7 @@
             </tr>
             <tr>
                 <th>가입경로</th>
-                <td name="path" onclick="checkform(this)">구인구직사이트<br/>
+                <td name="path">구인구직사이트<br/>
                     <input type="radio" name="pathway" value="albamon" onclick="ect_hide()"/>알바몬
                     <input type="radio" name="pathway" value="albaheaven" onclick="ect_hide()"/>알바천국
                     <input type="radio" name="pathway" value="incruit" onclick="ect_hide()"/>인쿠르트
