@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<login>
+    <result>false</result>
+    <message>비밀번호를 잘 못 입력하셨습니다.</message>
+</login>

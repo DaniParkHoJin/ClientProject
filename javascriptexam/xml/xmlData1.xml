@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<school>
+
+    <subject>
+
+        <title>Ajax-xml</title>
+
+        <time>매주 월/화/수/목/금 09시00분~18시00분</time>
+
+        <teacher>홍길동</teacher>
+
+    </subject>
+</school>
