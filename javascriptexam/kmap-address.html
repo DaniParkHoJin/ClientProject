@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오 지도</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #map {
+            height: 100vh;
+        }
+
+        #address {
+            color: white;
+            text-indent: 1rem;
+            width: 100%;
+            height: 1.8rem;
+            line-height: 1.8rem;
+            background-color: rgba(0, 0, 0, .7);
+            position: absolute;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+  <div id="map">
+    <div id="address">지도 중심의 주소</div> 
+    </div>
+<script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ce40522597d3df3c2ca033a2e4a56a3&libraries=services"></script>
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        mapOption = {
+            center: new kakao.maps.LatLng(37.575851, 126.976939),
+            // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    const geocoder = new kakao.maps.services.Geocoder();
+
+    searchAddrFromCoords(map.getCenter()); // 지도의 중심 좌표
+
+    kakao.maps.event.addListener(map, 'idle', function () {
+        searchAddrFromCoords(map.getCenter());
+    });
+
+    function searchAddrFromCoords(coords) {
+        let lng = coords.getLng();
+        let lat = coords.getLat();
+        geocoder.coord2RegionCode(lng, lat, function (result, status) {
+            if (status === kakao.maps.services.Status.OK) {
+                const address = document.getElementById('address');
+                result.forEach(function (v) {
+                    if (v.region_type === 'H') { // 행정동
+                        address.innerHTML = v.address_name;
+                    }
+                });
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

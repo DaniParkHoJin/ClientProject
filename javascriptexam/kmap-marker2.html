@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카카오 지도</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #map {
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ce40522597d3df3c2ca033a2e4a56a3"></script>
+  <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+      mapOption = {
+        center: new kakao.maps.LatLng(37.575851, 126.976939),
+        // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+      };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+// 마커에 클릭이벤트를 등록합니다
+kakao.maps.event.addListener(map, 'click', function (event) { 
+new kakao.maps.Marker({
+map: map,
+position: event.latLng 
+});
+});
+  </script>
+</body>
+
+</html>

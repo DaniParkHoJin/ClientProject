@@ -26,53 +26,69 @@ function zipcode_openwin() {
 }
 
 function checkForm(regForm) {
-    let r1 = /[0123456789]/g;
-    let r2 = /[^a-zA-Z0-9]/g;
-    let r3 = "~!@#$%^&*()_+=|\/?:\"'<>,.()[]{};"
-    unname = regForm.name_name.value;
-    b = false;
-    if (unname.replace(/\s/g, "") == "") {
-        alert("올바른 이름을 입력하세요.");
-        regForm.name_name.focus();
-        return false;
-    }
-    for (let i = 0; i < unname.lang; i++) {
-        let c = unname.charAt(i);
-        if (r3.search(c) >= 0 || c.search(r1) >= 0) {
-            b = true;
-            break;
+    // 이름(실명) 유효성 검사
+    function validateName() {
+        let nameField = document.getElementById('name_id').value.trim();
+        let regex = /^[가-힣]{2,}$/;
+
+        if (!regex.test(nameField)) {
+            alert("이름을 한글로 2글자 이상 입력해주세요.");
+            return false;
         }
-    }
-    if (b) {
-        alert("이름은 문자만 입력하셔야 합니다.");
-        regForm.name_name = "";
-        regForm.name_name.focus();
-        return false;
-    }
-    id = regForm.name_userid.value;
-    if (id.replace(/\s/g, "") == "" || id.search(r2) >= 0) {
-        alert("아이디가 입력되지 않았거나 아이디는 영문자로 구성되어야 합니다.");
-        regForm.name_userid.value="";
-        regForm.name_userid.focus();
-        return false;
-    }
-    if (id.substr(0,1).match(r1)){
-        alert("아이디의 첫 글자에는 숫자가 올 수 없습니다.");
-        regForm.name_userid.value="";
-        regForm.name_userid.focus();
-        return false;
-    }
-    pw = regForm.name_password.value;
-    if(pw.replace(/\s/g, "") == "" || pw.search(r2) >= 0) {
-        alert("비밀번호는 영문자와 숫자로 구성되어야 합니다.");
-        regForm.name_password.value="";
-        regForm.name_password.focus();
+
+        return true;
     }
 
-    if(pw != regForm.name_repassword){
-        alert("비밀번호와 비밀번호 확인이 다릅니다. 다시 입력해주세요.");
-        regForm.name_repassword.value="";
-        regForm.name_repassword.focus();
+    // 회원ID 유효성 검사
+    function validateUserID() {
+        let userIDField = document.getElementById('id_userid').value.trim();
+        let regex = /^[a-zA-Z][a-zA-Z0-9]{3,17}$/;
+
+        if (!regex.test(userIDField)) {
+            alert("회원ID는 영문자로 시작하는 4~18자의 영문, 숫자를 조합하여 입력해주세요.");
+            return false;
+        }
+
+        return true;
     }
+
+    // 비밀번호 유효성 검사
+    function validatePassword() {
+        let passwordField = document.getElementById('id_password').value;
+        let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+
+        if (!regex.test(passwordField)) {
+            alert("비밀번호는 영문 대소문자, 숫자, 특수문자를 포함하여 최소 8자 이상 입력해주세요.");
+            return false;
+        }
+
+        return true;
+    }
+    // 비밀번호와 비밀번호 확인 일치 여부 검사
+    function validatePasswordMatch() {
+        let password = document.getElementById('id_password').value;
+        let repassword = document.getElementById('id_repassword').value;
+
+        if (password !== repassword) {
+            alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
+            return false;
+        }
+
+        return true;
+    }
+
+    // 이메일 유효성 검사
+    function validateEmail() {
+        let emailField = document.getElementById('id_email').value;
+        let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!regex.test(emailField)) {
+            alert("올바른 이메일 주소를 입력해주세요.");
+            return false;
+        }
+
+        return true;
+    }
+
 }
 
